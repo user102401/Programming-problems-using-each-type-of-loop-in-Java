@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class FibonacciSequence {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int count = 0;
+
+        System.out.println("Fibonacci sequence:");
+
+        // Using a while loop to generate the Fibonacci sequence
+        while (count < n) {
+            System.out.print(firstNumber + ", ");
+
+            int nextNumber = firstNumber + secondNumber;
+            firstNumber = secondNumber;
+            secondNumber = nextNumber;
+
+            count++;
+        }
+
+        scanner.close();
+    }
+}
